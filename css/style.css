@@ -41,8 +41,13 @@ p {
 .card__link {
   color: hsl(0, 0%, 100%);
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
 }
+@media (prefers-reduced-motion: no-preference) {
+  .card__link {
+    transition: color 0.3s ease-in-out;
+  }
+}
+
 .card__header:hover::before {
   opacity: 1;
 }
@@ -50,8 +55,12 @@ p {
 .card__header::before, .card__header::after {
   position: absolute;
   opacity: 0;
-  transition: opacity 0.2s ease-in-out;
   pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .card__header::before, .card__header::after {
+    transition: opacity 0.2s ease-in-out;
+  }
 }
 
 .card, .card__header::after, .card__header-image {
