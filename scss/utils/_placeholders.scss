@@ -1,0 +1,36 @@
+@use '../base/variables' as var;
+@use 'functions' as func;
+
+//Placeholders
+%pos-relative {
+  position: relative;
+}
+%cyan-text {
+  color: func.get-color("cyan400");
+}
+%text-link {
+  color: func.get-color("white");
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    @extend %cyan-text;
+  }
+}
+%opacity-full {
+  opacity: 1;
+}
+%pseudo-img-layout {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+}
+%border-radius-all {
+  border-start-start-radius: var.$borderRadius;
+  border-start-end-radius: var.$borderRadius;
+  border-end-start-radius: var.$borderRadius;
+  border-end-end-radius: var.$borderRadius;
+}
+%font-weight-400 {
+  font-weight: func.get-font("weights", 2);
+}

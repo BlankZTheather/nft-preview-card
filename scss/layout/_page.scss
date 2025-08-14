@@ -1,0 +1,12 @@
+@use '../utils/functions' as func;
+
+.page {
+  background-color: func.get-color("blue950");
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-inline-size: 100%;
+    margin-block: clamp(3em, calc(1rem + 5.25vw), 4em);
+  }
+}

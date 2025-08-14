@@ -1,0 +1,24 @@
+@use 'variables' as var;
+@use '../utils/functions' as func;
+//Typography
+@font-face {
+  font-family: func.get-font("name");
+  src: url("#{func.get-font("url")}") format("truetype");
+  font-weight: func.get-font("weights", 1) func.get-font("weights", -1);
+}
+
+body {
+  font-family: func.get-font("name"), sans-serif;
+  font-weight: func.get-font("weights", 1);
+  font-size: var.$fontBaseSize;
+}
+
+h1 {
+  font-size: clamp(1.25em, calc(1em + 1.25vw), 1.5em);
+  font-weight: func.get-font("weights", -1);
+}
+
+p {
+  color: func.get-color("blue500");
+  font-size: clamp(0.875em, calc(0.625em + 0.75vw), 1em);
+}

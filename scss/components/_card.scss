@@ -1,0 +1,105 @@
+@use "../base/variables" as var;
+@use "../utils/functions" as func;
+@use "../utils/placeholders";
+@use "../utils/mixins" as mix;
+
+.card {
+  @extend %border-radius-all;
+  @include mix.padding-all(clamp(1em, calc(1em + 2vw), 1.78em));
+  background-color: func.get-color('blue900');
+  inline-size: min(calc(100% - 20vw), 21rem);
+
+  &__header {
+    @extend %pos-relative;
+
+    &::before {
+      @extend %pseudo-img-layout;
+      content: url("#{var.$imgIconViewURL}");
+      inset-block-start: 50%;
+      inset-inline-start: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    &::after {
+      @extend %pseudo-img-layout;
+      @extend %border-radius-all;
+      content: "";
+      inset-inline-start: 0;
+      inset-block-start: 0;
+      background-color: func.get-color("cyan400");
+      inline-size: 100%;
+      block-size: 100%;
+    }
+
+    &:hover::before {
+      @extend %opacity-full;
+    }
+
+    &:hover::after {
+      opacity: 0.5;
+    }
+  }
+
+  &__header-image {
+    @extend %border-radius-all;
+    object-fit: contain;
+    inline-size: 100%;
+    block-size: fit-content;
+    display: block;
+  }
+
+  &__link {
+    @extend %text-link;
+  }
+
+  &__text--description {
+    line-height: 1.5;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    border-block-end: 1px solid func.get-color("blue800");
+  }
+
+  &__currency {
+    @extend %cyan-text;
+    @extend %font-weight-400;
+    display: flex;
+
+    &::before {
+      content: url("#{var.$imgEthURL}");
+      margin-inline-end: clamp(0.4825em, 2vw, 0.67em);
+    }
+  }
+
+  &__expiry {
+    @extend %font-weight-400;
+    @extend %pos-relative;
+
+    &::before {
+      @extend %pos-relative;
+      content: url("#{var.$imgClockURL}");
+      margin-inline-end: clamp(0.3333em, 2vw, 0.444em);
+      inset-block-start: 0.1389em;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    margin-block-start: clamp(0.77em,calc(0.67em + 0.5vw), 0.89em);
+    gap: clamp(0.56em,2vw, 1.11em);
+  }
+
+  &__footer-img {
+    @include mix.circle-border(1px);
+    @include mix.constrain-size(clamp(1.89em,calc(1em + 2.22vw), 2.23em));
+  }
+
+  &__text-creator {
+
+  }
+
+}

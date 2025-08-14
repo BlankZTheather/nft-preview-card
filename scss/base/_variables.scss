@@ -1,0 +1,19 @@
+//Variables
+$color: (
+        "blue500": hsl(215, 51%, 70%),
+        "cyan400":hsl(178, 100%, 50%),
+        "blue950":hsl(217, 54%, 11%),
+        "blue900":hsl(216, 50%, 16%),
+        "blue800":hsl(215, 32%, 27%),
+        "white": hsl(0, 0%, 100%)
+);
+$fontBaseSize: 18px;
+$borderRadius: 14px;
+$outfitFont: (
+        "name": "Outfit",
+        "weights": 300 400 600,
+        "url": "../fonts/Outfit/Outfit-VariableFont_wght.ttf"
+);
+$imgIconViewURL: "../images/icon-view.svg";
+$imgEthURL: "../images/icon-ethereum.svg";
+$imgClockURL: "../images/icon-clock.svg";

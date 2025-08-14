@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use 'sass:list';
+@use '../base/variables' as var;
+
+//Functions
+@function get-font($key,$i:0) {
+  @if $key == "weights" {
+    @return list.nth(map.get(var.$outfitFont, $key), $i);
+  }
+  @return map.get(var.$outfitFont, $key);
+}
+
+@function get-color($key) {
+  @return map.get(var.$color, $key);
+}

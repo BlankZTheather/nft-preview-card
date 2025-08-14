@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="BlankZTheather">
+    <meta name="description" content="my solution to NFT preview card challenge from frontendmentor.io">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | NFT preview card component</title>
+</head>
+<body class="page">
+<main class="page__card">
+    <article class="card">
+        <header class="card__header">
+            <a class="card__img-link" href="#">
+                <img class="card__header-image" src="images/image-equilibrium.jpg" alt="" aria-labelledby="equilibrium"
+                     width="604"
+                     height="604"/>
+            </a>
+        </header>
+        <section class="card__section">
+            <h1 class="card__title"><a class="card__link" id="equilibrium" href="#">Equilibrium #3429</a></h1>
+
+            <p class="card__text card__text--description">Our Equilibrium collection promotes balance and calm.</p>
+
+            <section class="card__details">
+                <p class="card__currency">0.041 <abbr title="Ether">ETH</abbr></p>
+                <p class="card__expiry">
+                    <time datetime="PT3D">3 days</time>
+                    left
+                </p>
+            </section>
+
+            <footer class="card__footer">
+                <img class="card__footer-img" src="images/image-avatar.png" alt="Avatar of Jules Wyvern" width="132"
+                     height="132">
+                <p class="card__text card__text--creator">Creation of <a class="card__link" href="#">Jules Wyvern</a></p>
+            </footer>
+        </section>
+    </article>
+</main>
+</body>
+</html>
