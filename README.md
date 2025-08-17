@@ -27,4 +27,4 @@ Users should be able to:
 ### Links
 
 - [Live Site](https://blankztheather.github.io/nft-preview-card)
-- [My Submission]()
+- [My Submission](https://www.frontendmentor.io/solutions/nft-preview-card-using-scss-and-bem-1EvgPNh8Kb)
